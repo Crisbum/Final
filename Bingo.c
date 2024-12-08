@@ -62,3 +62,13 @@ int CountBingoLines(int* pBoard) {
 
     return bingo;
 }
+// Hard 모드: AI가 선택한 숫자를 반환
+int SelectAINumber_Hard(int* pAINumber, int* pPlayerNumber) {
+    int bestIndex = -1;
+    int maxPotentialBingos = -1;
+
+    for (int i = 0; i < 25; i++) {
+        if (pAINumber[i] != INT_MAX) {
+            int row = i / 5, col = i % 5;
+            int rowRemaining = 0, colRemaining = 0, diag1Remaining = 0, diag2Remaining = 0;
+            int potentialBingos = 0;
