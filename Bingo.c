@@ -127,4 +127,26 @@ int main()
             printf("===== 패배하셨습니다. =====\n");
             break;
         }
+        // 플레이어 입력
+        printf("숫자를 입력하세요 (0 : 종료) : ");
+        int iInput;
+        scanf("%d", &iInput);
+
+        if (iInput == 0)
+            break;
+        else if (iInput < 1 || iInput > 25)
+            continue;
+
+        // 입력 처리
+        int isValid = 0;
+        for (int i = 0; i < 25; i++) {
+            if (iNumber[i] == iInput) {
+                iNumber[i] = INT_MAX;
+                isValid = 1;
+                break;
+            }
+        }
+        if (!isValid)
+            continue;
+
 
