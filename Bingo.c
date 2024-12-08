@@ -20,3 +20,15 @@ int CountBingoLines(int* pBoard) {
         if (isBingo)
             bingo++;
     }
+  // 세로 확인
+    for (int i = 0; i < 5; i++) {
+        int isBingo = 1;
+        for (int j = 0; j < 5; j++) {
+            if (pBoard[j * 5 + i] != INT_MAX) {
+                isBingo = 0;
+                break;
+            }
+        }
+        if (isBingo)
+            bingo++;
+    }
