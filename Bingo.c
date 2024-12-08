@@ -73,3 +73,18 @@ int main()
         iNumber[i] = i + 1;
         iAINumber[i] = i + 1;
     }
+    // 숫자 섞기
+    for (int i = 0; i < 100; i++) {
+        int idx1 = rand() % 25;
+        int idx2 = rand() % 25;
+        int temp = iNumber[idx1];
+        iNumber[idx1] = iNumber[idx2];
+        iNumber[idx2] = temp;
+
+        temp = iAINumber[idx1];
+        iAINumber[idx1] = iAINumber[idx2];
+        iAINumber[idx2] = temp;
+    }
+
+    int iBingo = 0, iAIBingo = 0;
+    int iAIMode;
