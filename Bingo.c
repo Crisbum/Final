@@ -42,4 +42,16 @@ int CountBingoLines(int* pBoard) {
     }
     if (isBingo)
         bingo++;
+  // 오른쪽 대각선 확인
+    isBingo = 1;
+    for (int i = 0; i < 5; i++) {
+        if (pBoard[i * 5 + (4 - i)] != INT_MAX) {
+            isBingo = 0;
+            break;
+        }
+    }
+    if (isBingo)
+        bingo++;
 
+    return bingo;
+}
