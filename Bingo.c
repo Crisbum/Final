@@ -148,7 +148,35 @@ int main()
         }
         if (!isValid)
             continue;
-        // AI 숫자 선택
+        /*// AI 숫자 선택
+        int aiSelectedNumber = 0;
+        if (iAIMode == AM_EASY)
+            aiSelectedNumber = SelectAINumber_Easy(iAINumber);
+        else if (iAIMode == AM_HARD)
+            aiSelectedNumber = SelectAINumber_Hard(iAINumber, iNumber);
+
+        // AI 선택 번호를 플레이어 빙고판에서도 마킹
+        for (int i = 0; i < 25; i++) {
+            if (iNumber[i] == aiSelectedNumber) {
+                iNumber[i] = INT_MAX;
+                break;
+            }
+        }
+
+        // AI가 선택한 숫자 출력
+        printf("AI가 선택한 숫자: %d \n", aiSelectedNumber);
+
+        // 빙고 라인 계산
+        iBingo = CountBingoLines(iNumber);
+        iAIBingo = CountBingoLines(iAINumber);
+
+        // 게임 진행을 위해 일시 정지
+        system("pause");
+    }
+
+    return 0;
+}*/
+// AI 숫자 선택
         int aiSelectedNumber = 0;
         if (iAIMode == AM_EASY)
             aiSelectedNumber = SelectAINumber_Easy(iAINumber);
@@ -176,3 +204,4 @@ int main()
 
     return 0;
 }
+
