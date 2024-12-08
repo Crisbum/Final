@@ -102,4 +102,19 @@ int main()
         if (iAIMode >= AM_EASY && iAIMode <= AM_HARD)
             break;
     }
+    // 게임 시작
+    while (1) {
+        system("cls");
 
+        // 플레이어 빙고판 출력
+        printf("=========== Player ===========\n");
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                if (iNumber[i * 5 + j] == INT_MAX)
+                    printf("*\t");
+                else
+                    printf("%d\t", iNumber[i * 5 + j]);
+            }
+            printf("\n");
+        }
+        printf("Bingo Line : %d\n\n", iBingo);
