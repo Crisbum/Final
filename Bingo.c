@@ -118,3 +118,13 @@ int main()
             printf("\n");
         }
         printf("Bingo Line : %d\n\n", iBingo);
+        // 승리 조건 확인
+        if (iBingo >= 5) {
+            printf("====== 승리하셨습니다! ======\n");
+            break;
+        }
+        if (iAIBingo >= 5) {
+            printf("===== 패배하셨습니다. =====\n");
+            break;
+        }
+
