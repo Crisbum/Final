@@ -88,3 +88,18 @@ int main()
 
     int iBingo = 0, iAIBingo = 0;
     int iAIMode;
+
+    // AI 모드 선택
+    while (1) {
+        system("cls");
+        printf("******** Welcome to Bingo Game *********** \n\n");
+        printf("1. Easy\n");
+        printf("2. Hard\n\n");
+        printf("**************************************** \n\n");
+        printf("난이도를 선택하세요: ");
+        scanf("%d", &iAIMode);
+
+        if (iAIMode >= AM_EASY && iAIMode <= AM_HARD)
+            break;
+    }
+
