@@ -62,3 +62,16 @@ int CountBingoLines(int* pBoard) {
 
     return bingo;
 }
+
+// Easy 모드: AI가 선택한 숫자를 반환
+int SelectAINumber_Easy(int* pAINumber) {
+    while (1) {
+        int randIndex = rand() % 25;
+
+        if (pAINumber[randIndex] != INT_MAX) {
+            int selectedNumber = pAINumber[randIndex];
+            pAINumber[randIndex] = INT_MAX; // 선택된 숫자를 마킹
+            return selectedNumber; // 선택한 숫자를 반환
+        }
+    }
+}
