@@ -62,3 +62,14 @@ int CountBingoLines(int* pBoard) {
 
     return bingo;
 }
+int main()
+{
+    srand((unsigned int)time(NULL));
+
+    // 플레이어와 AI 빙고판 초기화
+    int iNumber[25] = { 25 };
+    int iAINumber[25] = { 25 };
+    for (int i = 0; i < 25; i++) {
+        iNumber[i] = i + 1;
+        iAINumber[i] = i + 1;
+    }
