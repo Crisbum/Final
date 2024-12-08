@@ -4,6 +4,13 @@
 #include <limits.h> // INT_MAX 사용
 #pragma warning(disable:4996)
 
+// AI 모드 정의
+typedef enum {
+    AM_EASY = 1,
+    AM_HARD
+} AI_MODE;
+
+
 // 빙고 라인 계산 함수
 int CountBingoLines(int* pBoard) {
     int bingo = 0;
